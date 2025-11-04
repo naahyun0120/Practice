@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky + Flex Layout</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        .body {
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        /* 상단 lorem 구역 */
+        .intro {
+            font-size: 15px;
+            color: violet;
+            /* max-width: 800px; */
+            /* margin: 100px auto;
+            padding: 0 20px; */
+            /* font-size: 1.1rem; */
+        }
+
+        /* 좌측 이미지 고정 */
+        .image_wrap {
+            width: 30px;
+            height: 100vh;
+            flex: 1;
+            position: sticky;
+            top: 0;
+        }
+
+        .image-wrap > img {
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+            /* border-radius: 12px; */
+        }
+
+        /* 전체 콘텐츠 레이아웃 */
+        .content {
+            display: flex;
+            /* align-items: flex-start; */
+            gap: 60px;
+            /* padding: 100px 5%; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 상단 lorem 문단 영역 -->
+    <section class="intro">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas nihil! Atque ab fugit
+            accusamus, suscipit et animi nesciunt tempore non dolore, culpa sapiente rerum nam autem praesentium quae
+            id.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas nihil! Atque ab fugit
+            accusamus, suscipit et animi nesciunt tempore non dolore, culpa sapiente rerum nam autem praesentium quae
+            id.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas nihil! Atque ab fugit
+            accusamus, suscipit et animi nesciunt tempore non dolore, culpa sapiente rerum nam autem praesentium quae
+            id.<br>
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas nihil! Atque ab fugit
+            accusamus, suscipit et animi nesciunt tempore non dolore, culpa sapiente rerum nam autem praesentium quae
+            id.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas nihil! Atque ab fugit
+            accusamus, suscipit et animi nesciunt tempore non dolore, culpa sapiente rerum nam autem praesentium quae
+            id.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas nihil! Atque ab fugit
+            accusamus, suscipit et animi nesciunt tempore non dolore, culpa sapiente rerum nam autem praesentium quae
+            id.
+        </p>
+    </section>
+
+    <!-- 본문 레이아웃 -->
+    <section class="content">
+        <!-- 좌측 고정 이미지 -->
+        <div class="image_wrap">
+            <img src="./good.jpg" alt="city" />
+        </div>
+
+        <!-- 우측 스크롤 텍스트 -->
+        <div class="text_wrap">
+            <article class="text_block">
+                <h2>맨해튼 (Manhattan)</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                    voluptates facilis, ab provident obcaecati molestiae modi nemo
+                    corporis, eveniet nostrum non et est quas.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                    deleniti quisquam cumque vel nihil quod maiores nostrum veritatis
+                    recusandae.</p>
+            </article>
+
+            <article class="text_block">
+                <h2>브롱크스 (Bronx)</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                    voluptates facilis, ab provident obcaecati molestiae modi nemo
+                    corporis, eveniet nostrum non et est quas.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                    deleniti quisquam cumque vel nihil quod maiores nostrum veritatis
+                    recusandae.</p>
+            </article>
+
+            <article class="text_block">
+                <h2>퀸즈 (Queens)</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+                    voluptates facilis, ab provident obcaecati molestiae modi nemo
+                    corporis, eveniet nostrum non et est quas.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                    deleniti quisquam cumque vel nihil quod maiores nostrum veritatis
+                    recusandae.</p>
+            </article>
+        </div>
+    </section>
+
+</body>
+
+</html>
